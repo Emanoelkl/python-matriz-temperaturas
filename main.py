@@ -17,7 +17,7 @@ def ler_temperaturas():
     return matriz
 
 def mostrar_tabela(matriz):
-    print(f"           manhã   tarde   noite   madrugada")
+    print(f"\n           manhã   tarde   noite   madrugada")
     for dia in range(len(matriz)):
         print(f"{dias[dia]:>7}", end=" ")
         for hora in range(len(matriz[dia])):
@@ -70,9 +70,8 @@ def consultar(matriz):
             print("Resposta invalida! tente novamente.")
     print(f"Temperatura na {dia} de {hora} foi {matriz[dias.index(dia)][horarios.index(hora)]}°C")
 
-#matriz = ler_temperaturas()
-matriz_teste = [[1.0, 2.0, 3.0, 4.0], [5.0, 6.0, 7.0, 8.0], [9.0, 10.0, 11.0, 12.0], [13.0, 14.0, 15.0, 16.0], [17.0, 18.0, 19.0, 20.0]]
-mostrar_tabela(matriz_teste)
-medias(matriz_teste)
-maior_menor(matriz_teste)
-consultar(matriz_teste)
+matriz = ler_temperaturas()
+mostrar_tabela(matriz)
+medias(matriz)
+maior_menor(matriz)
+consultar(matriz)
