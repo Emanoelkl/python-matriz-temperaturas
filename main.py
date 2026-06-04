@@ -16,5 +16,14 @@ def ler_temperaturas():
         matriz.append(linha)
     return matriz
 
-matriz = ler_temperaturas()
-print(matriz)
+def mostrar_tabela(matriz):
+    print(f"           manhã   tarde   noite   madrugada")
+    for dia in range(len(matriz)):
+        print(f"{dias[dia]:>7}", end=" ")
+        for hora in range(len(matriz[dia])):
+            print(f"{matriz[dia][hora]:>7}", end=" ")
+        print()
+
+#matriz = ler_temperaturas()
+matriz_teste = [[1.0, 2.0, 3.0, 4.0], [5.0, 6.0, 7.0, 8.0], [9.0, 10.0, 11.0, 12.0], [13.0, 14.0, 15.0, 16.0], [17.0, 18.0, 19.0, 20.0]]
+mostrar_tabela(matriz_teste)
