@@ -24,6 +24,23 @@ def mostrar_tabela(matriz):
             print(f"{matriz[dia][hora]:>7}", end=" ")
         print()
 
+def medias(matriz):
+    print("\nMedia de temperaturas de cada dia:")
+    for dia in range(len(matriz)):
+        soma = 0
+        print(f"{dias[dia]}:", end=" ")
+        for hora in range(len(matriz[dia])):
+            soma += matriz[dia][hora]
+        print(f"{soma/4}°C")
+    print("\nMedia de temperaturas de cada horario:")
+    for hora in range(len(matriz[0])):
+        soma = 0
+        print(f"{horarios[hora]}:", end=" ")
+        for dia in range(len(matriz)):
+            soma += matriz[dia][hora]
+        print(f"{soma/5}°C")
+
 #matriz = ler_temperaturas()
 matriz_teste = [[1.0, 2.0, 3.0, 4.0], [5.0, 6.0, 7.0, 8.0], [9.0, 10.0, 11.0, 12.0], [13.0, 14.0, 15.0, 16.0], [17.0, 18.0, 19.0, 20.0]]
 mostrar_tabela(matriz_teste)
+medias(matriz_teste)
